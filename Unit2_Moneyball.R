@@ -18,8 +18,6 @@ WinsReg = lm(W ~ RD, data=moneyball)
 summary(WinsReg)
 
 
-# VIDEO 3
-
 str(moneyball)
 
 # Regression model to predict runs scored
