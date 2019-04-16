@@ -1,11 +1,8 @@
-# VIDEO 1
 
 # Read in the data
 NBA = read.csv("NBA_train.csv")
 str(NBA)
 
-
-# VIDEO 2
 
 # How many wins to make the playoffs?
 table(NBA$W, NBA$Playoffs)
@@ -20,8 +17,6 @@ plot(NBA$PTSdiff, NBA$W)
 WinsReg = lm(W ~ PTSdiff, data=NBA)
 summary(WinsReg)
 
-
-# VIDEO 3
 
 # Linear regression model for points scored
 PointsReg = lm(PTS ~ X2PA + X3PA + FTA + AST + ORB + DRB + TOV + STL + BLK, data=NBA)
@@ -56,11 +51,6 @@ SSE_4 = sum(PointsReg4$residuals^2)
 RMSE_4 = sqrt(SSE_4/nrow(NBA))
 SSE_4
 RMSE_4
-
-
-
-
-# VIDEO 4
 
 # Read in test set
 NBA_test = read.csv("NBA_test.csv")
